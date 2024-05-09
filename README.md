@@ -531,6 +531,7 @@ Permission:
 ### Конфигурации серверов
 
 Определяем конфигурацию машин для каждого сервиса.
+Будем использовать облачный хостинг виртуальных машин.
 
 [//]: # (| Название      |   Хостинг    |          Конфигурация          | Cores | Cnt | Цена $ &#40;одна штука&#41; | Амортизация &#40;сумма, на 5 лет&#41; |)
 
@@ -550,22 +551,23 @@ Permission:
 
 #### Северная Америка.
 2 Дц
-По [этой ссылке](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/audience-geography/*/999/28d?key=atlassian.com&webSource=Total) и [этой](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/audience-geography/*/999/28d?key=confluence.atlassian.com&webSource=Total) 
-предполагаем, что здесь до 40% общей нагрузки
 
-| Сервис           | Хостинг       | Конфиг                                  | Кол-во | 
-|------------------|---------------|-----------------------------------------|--------|
-| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ  | 6      | 
-| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 4 TБ    | 2      | 
-| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ | 3      | 
-| CEPH             | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 40x NVMe 16 TБ  | 2      |
+Предполагаем[1](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/audience-geography/*/999/28d?key=atlassian.com&webSource=Total)[2](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/audience-geography/*/999/28d?key=confluence.atlassian.com&webSource=Total), 
+что здесь до 40% общей нагрузки
+
+| Сервис           | Хостинг       | Конфиг                                   | Кол-во | 
+|------------------|---------------|------------------------------------------|--------|
+| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ   | 6      | 
+| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 4 TБ     | 2      | 
+| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ  | 3      | 
+| CEPH             | Digital Ocean | 2 core CPU/ 5x128 GB RAM/ 40x NVMe 16 TБ | 2      |
 
 [//]: # (| Название      | Хостинг |            Конфигурация             | Cores | Cnt | Аренда $ &#40;в месяц&#41; | )
 
@@ -588,19 +590,19 @@ Permission:
 #### Южная Америка.
 Предположительно до 15% общей нагрузки
 
-| Сервис           | Хостинг       | Конфиг                                  | Кол-во | 
-|------------------|---------------|-----------------------------------------|--------|
-| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ  | 6      | 
-| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 1 TБ    | 2      | 
-| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ | 3      | 
-| CEPH             | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 10x NVMe 16 TБ  | 2      |
+| Сервис           | Хостинг       | Конфиг                                   | Кол-во | 
+|------------------|---------------|------------------------------------------|--------|
+| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ   | 6      | 
+| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 1 TБ     | 2      | 
+| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ  | 3      | 
+| CEPH             | Digital Ocean | 2 core CPU/ 2x128 GB RAM/ 10x NVMe 16 TБ | 2      |
 
 
 
@@ -608,38 +610,38 @@ Permission:
 
 Предположительно здесь до 30% общей нагрузки
 
-| Сервис           | Хостинг       | Конфиг                                  | Кол-во | 
-|------------------|---------------|-----------------------------------------|--------|
-| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ  | 6      | 
-| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 2 TБ    | 2      | 
-| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ | 3      | 
-| CEPH             | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 30x NVMe 16 TБ  | 2      |
+| Сервис           | Хостинг       | Конфиг                                   | Кол-во | 
+|------------------|---------------|------------------------------------------|--------|
+| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ   | 6      | 
+| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 2 TБ     | 2      | 
+| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ  | 3      | 
+| CEPH             | Digital Ocean | 2 core CPU/ 4x128 GB RAM/ 30x NVMe 16 TБ | 2      |
 
 
 #### Азия.
 
 Предположительно здесь до 10% общей нагрузки
 
-| Сервис           | Хостинг       | Конфиг                                  | Кол-во | 
-|------------------|---------------|-----------------------------------------|--------|
-| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                  | 1      | 
-| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ  | 6      | 
-| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 512 ГБ  | 2      | 
-| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
-| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ | 3      | 
-| CEPH             | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 10x NVMe 16 TБ  | 2      |
+| Сервис           | Хостинг       | Конфиг                                   | Кол-во | 
+|------------------|---------------|------------------------------------------|--------|
+| nginx            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| permission       | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| search           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| documents        | Digital Ocean | 2 core CPU/ 1x2 GB RAM                   | 1      | 
+| outbox processor | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| worker           | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| PostgreSQL       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 128 ГБ   | 6      | 
+| ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 512 ГБ   | 2      | 
+| Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                   | 1      | 
+| Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ  | 3      | 
+| CEPH             | Digital Ocean | 2 core CPU/ 2x128 GB RAM/ 10x NVMe 16 TБ | 2      |
 
 
 #### Австралия.
@@ -657,7 +659,7 @@ Permission:
 | ClickHouse       | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 1x NVMe 512 ГБ  | 2      | 
 | Redis            | Digital Ocean | 1 core CPU/ 1x2 GB RAM                  | 1      | 
 | Kafka            | Digital Ocean | 1 core CPU/ 1x2 GB RAM/  1x NVMe 128 ГБ | 3      | 
-| CEPH             | Digital Ocean | 1 core CPU/ 1x2 GB RAM/ 5x NVMe 16 TБ   | 2      |
+| CEPH             | Digital Ocean | 2 core CPU/ 1x128 GB RAM/ 5x NVMe 16 TБ | 2      |
 
 
 ## Список литературы <a name="12"></a>
@@ -674,3 +676,4 @@ Permission:
 10. [Статья о паттерне outbox](https://habr.com/ru/companies/lamoda/articles/678932/)
 11. [Крупнейшие компании мира по странам #1](https://холдинги.рф/global-countries/)
 12. [Крупнейшие компании мира по странам #2](https://vk.com/@investor_in_life-kak-raspredeleny-po-stranam-kompanii-lidery?ysclid=lvy6rajvs0368142552)
+13. [Требования для CEPH](https://servermall.ru/blog/kak-vybrat-server-dlya-proxmox/)
