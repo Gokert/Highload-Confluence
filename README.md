@@ -485,18 +485,18 @@ __Documents service__ - сервис, реализующий создание д
 __Search service__ - сервис, обеспечивающий поиск по документам через ElasticSearch.
 Через Kafka обеспечивается синхронизация данных документов с сервисом Documents service, так как у этих сервисов должны быть одинаковые данные о документах.
 
-Механизм копирования[[10](#список-литературы-a-name12a)] реализован на основе паттерна Outbox transaction заключается в разделении пайплайнов для чтения и записи в БД. Запись в БД происходит асинхронно - микросервис __outbox processor__ получает из бд данные и кладет их в виде сообщений в Kafka,
+[Механизм копирования](https://habr.com/ru/companies/lamoda/articles/678932/) реализован на основе паттерна Outbox transaction заключается в разделении пайплайнов для чтения и записи в БД. Запись в БД происходит асинхронно - микросервис __outbox processor__ получает из бд данные и кладет их в виде сообщений в Kafka,
 а затем другой микросервис __worker__ достает эти сообщения и записывает данные в ElasticSearch. Даже если Kafka станет недоступной, то все сообщения будут сохранены в таблице outbox messages и потому не будут потеряны.
 
 
 
-| Сервис             |                               Информация                               |
-|:-------------------|:----------------------------------------------------------------------:|
-| Permission Service |       Таблицы User, Acl, Companies в PostgreSQL, сессии в Redis        |
-| Documents service  | Таблица Documents в PostgreSQL, Versions в ClickHouse, картинки в CEPH |
-| Search service     |                Таблица Documents_search в ElasticSearch                |
-| outbox processor   |           получает новые данные из БД и отправляет в брокер            |
-| worker             |   необходим для получения данных из Kafka и вставки в ElasticSearch    |
+| Сервис             |                                      Информация                                       |
+|:-------------------|:-------------------------------------------------------------------------------------:|
+| Permission Service |               Таблицы User, Acl, Companies в PostgreSQL, сессии в Redis               |
+| Documents service  |    Таблица Documents, outbox в PostgreSQL, Versions в ClickHouse, картинки в CEPH     |
+| Search service     |                       Таблица Documents_search в ElasticSearch                        |
+| outbox processor   | получает новые данные из БД и отправляет в брокер. Таблица outbox table  в PostgreSQL |
+| worker             |           необходим для получения данных из Kafka и вставки в ElasticSearch           |
 
 ## Часть 11. Список серверов <a name="11"></a>
 
