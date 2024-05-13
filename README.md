@@ -585,7 +585,7 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
 | permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                            |       |
 | search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                            |       |
+| documents        | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                            |       |
 | outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                            |       |
@@ -648,7 +648,7 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
 | permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                          |       |
 | search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                          |       |
+| documents        | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                          |       |
 | outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                          |       |
@@ -694,7 +694,7 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
 | permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                          |       |
 | search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                          |       |
+| documents        | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                          |       |
 | outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                          |       |
@@ -739,7 +739,7 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
 | permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                            |       |
 | search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                            |       |
+| documents        | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                            |       |
 | outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                            |       |
@@ -756,7 +756,7 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 1      | 40                         |       |
 | permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                  | 2      | 80                         |       |
 | search           | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 2      | 40                         |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                  | 2      | 80                         |       |
+| documents        | Digital Ocean | 2 core CPU/ 4 GB RAM                  | 2      | 80                         |       |
 | outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 2      | 40                         |       |
 | worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 2      | 40                         |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ  | 6      | 90                         |       |
