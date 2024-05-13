@@ -584,14 +584,14 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | Сервис           | Хостинг       | Конфиг                                 | Кол-во | Аренда в месяц $ (1 ед.)      | Цена  |
 |------------------|---------------|----------------------------------------|--------|-------------------------------|-------|
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
-| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 1      | 80                            |       |
-| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 1      | 80                            |       |
-| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
-| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
+| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                            |       |
+| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
+| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                            |       |
+| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
+| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                            |       |
 | ClickHouse       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 4 ТБ     | 2      | 400                           |       |
-| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
+| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | Kafka            | Digital Ocean | 1 core CPU/ 2 GB RAM/  1x NVMe 128 ГБ  | 3      | 50                            |       |
 | CEPH             | own           | i5-13500/ 5*128 GB RAM/ 40x NVMe 16 TБ | 2      | 1000   (амортизация на 5 лет) | 60000 |
 
@@ -647,14 +647,14 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | Сервис           | Хостинг       | Конфиг                                 | Кол-во | Аренда в месяц $ (1 ед.)    | Цена  |
 |------------------|---------------|----------------------------------------|--------|-----------------------------|-------|
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
-| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 1      | 80                          |       |
-| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 1      | 80                          |       |
-| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
-| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
+| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                          |       |
+| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
+| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                          |       |
+| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
+| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                          |       |
 | ClickHouse       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 1 ТБ     | 2      | 160                         |       |
-| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
+| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | Kafka            | Digital Ocean | 1 core CPU/ 2 GB RAM/  1x NVMe 128 ГБ  | 3      | 50                          |       |
 | CEPH             | own           | i5-13500/ 2*128 GB RAM/ 10x NVMe 16 TБ | 2      | 320  (амортизация на 5 лет) | 19000 |
 
@@ -693,14 +693,14 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | Сервис           | Хостинг       | Конфиг                                 | Кол-во | Аренда в месяц $ (1 ед.)    | Цена  |
 |------------------|---------------|----------------------------------------|--------|-----------------------------|-------|
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
-| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 1      | 80                          |       |
-| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 1      | 80                          |       |
-| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
-| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
+| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                          |       |
+| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
+| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                          |       |
+| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
+| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                          |       |
 | ClickHouse       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 2 ТБ     | 2      | 250                         |       |
-| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                          |       |
+| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                          |       |
 | Kafka            | Digital Ocean | 1 core CPU/ 2 GB RAM/  1x NVMe 128 ГБ  | 3      | 50                          |       |
 | CEPH             | own           | i5-13500/ 4*128 GB RAM/ 30x NVMe 16 TБ | 2      | 600  (амортизация на 5 лет) | 37000 |
 
@@ -738,14 +738,14 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | Сервис           | Хостинг       | Конфиг                                 | Кол-во | Аренда в месяц $ (1 ед.)      | Цена  |
 |------------------|---------------|----------------------------------------|--------|-------------------------------|-------|
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
-| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 1      | 80                            |       |
-| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 1      | 80                            |       |
-| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
-| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
+| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                   | 2      | 80                            |       |
+| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
+| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                   | 2      | 80                            |       |
+| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
+| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ   | 6      | 90                            |       |
 | ClickHouse       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 512 ГБ   | 2      | 120                           |       |
-| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 1      | 40                            |       |
+| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                   | 2      | 40                            |       |
 | Kafka            | Digital Ocean | 1 core CPU/ 2 GB RAM/  1x NVMe 128 ГБ  | 3      | 50                            |       |
 | CEPH             | own           | i5-13500/ 2*128 GB RAM/ 10x NVMe 16 TБ | 2      | 280    (амортизация на 5 лет) | 17000 |
 
@@ -755,14 +755,14 @@ __Search service__ - сервис, обеспечивающий поиск по 
 | Сервис           | Хостинг       | Конфиг                                | Кол-во | Аренда в месяц $ (1 ед.)   | Цена  |
 |------------------|---------------|---------------------------------------|--------|----------------------------|-------|
 | nginx            | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 1      | 40                         |       |
-| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                  | 1      | 80                         |       |
-| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 1      | 40                         |       |
-| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                  | 1      | 80                         |       |
-| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 1      | 40                         |       |
-| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 1      | 40                         |       |
+| permission       | Digital Ocean | 2 core CPU/ 4 GB RAM                  | 2      | 80                         |       |
+| search           | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 2      | 40                         |       |
+| documents        | Digital Ocean | 2 core CPU/ 2 GB RAM                  | 2      | 80                         |       |
+| outbox processor | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 2      | 40                         |       |
+| worker           | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 2      | 40                         |       |
 | PostgreSQL       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 128 ГБ  | 6      | 90                         |       |
 | ClickHouse       | Digital Ocean | 2 core CPU/ 4 GB RAM/ 1x NVMe 512 ГБ  | 2      | 120                        |       |
-| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 1      | 40                         |       |
+| Redis            | Digital Ocean | 1 core CPU/ 2 GB RAM                  | 2      | 40                         |       |
 | Kafka            | Digital Ocean | 1 core CPU/ 2 GB RAM/  1x NVMe 128 ГБ | 3      | 50                         |       |
 | CEPH             | own           | i5-13500/128 GB RAM/5x NVMe 16 TБ     | 2      | 183 (амортизация на 5 лет) | 11000 |
 
